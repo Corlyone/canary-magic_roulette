@@ -49,7 +49,7 @@ end
 
 function Roulette:roll(player, slot)
 	if slot:isRolling() then
-		player:sendCancelMessage(Strings.WAIT_TO_SPIN)
+		player:sendTextMessage(MESSAGE_ADMINISTRADOR, string.format(Strings.WAIT_TO_SPIN))
 		return false
 	end
 
