@@ -31,7 +31,7 @@ then replace for:
 local Constants = dofile(DATA_DIRECTORY .. '/scripts/magic_roulette/lib/core/constants.lua')
 
 function onRouletteLook(thing, position, distance, description)
-	if thing:getName() == Constants.ROULETTE_DUMMY_NAME then
+	if thing:getName():lower() == Constants.ROULETTE_DUMMY_NAME then
 		local item = ItemType(thing:getOutfit().lookTypeEx)
 
 		return ('You see %s.\n%s'):format(
