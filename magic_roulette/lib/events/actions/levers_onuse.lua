@@ -18,6 +18,11 @@ function action.onUse(player, item)
 		item:getPosition():sendMagicEffect(CONST_ME_POFF)
 		return true
 	end
+	
+	if slot:isRolling() then
+		player:sendTextMessage(MESSAGE_ADMINISTRADOR, string.format(Strings.WAIT_TO_SPIN))
+		return false
+	end
 
 	Roulette:roll(player, slot)
 	return true
