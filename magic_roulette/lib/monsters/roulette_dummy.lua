@@ -10,7 +10,7 @@ local Constants = dofile(DATA_DIRECTORY .. '/scripts/magic_roulette/lib/core/con
 local mType = Game.createMonsterType(Constants.ROULETTE_DUMMY_NAME)
 local monster = {}
 
-monster.description = Constants.ROULETTE_DUMMY_NAME
+monster.description = ''
 monster.experience = 0
 monster.outfit = {lookTypeEx = 1551}
 

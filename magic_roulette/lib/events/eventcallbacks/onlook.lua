@@ -7,8 +7,7 @@
 
 local Constants = dofile(DATA_DIRECTORY .. '/scripts/magic_roulette/lib/core/constants.lua')
 
---[[local ec = EventCallback
-ec.onLook = function(self, thing, position, distance, description)
+function onRouletteLook(thing, position, distance, description)
 	if thing:getName() == Constants.ROULETTE_DUMMY_NAME then
 		local item = ItemType(thing:getOutfit().lookTypeEx)
 
@@ -19,5 +18,3 @@ ec.onLook = function(self, thing, position, distance, description)
 	end
 	return description
 end
-
---ec:register(1)]]   --desativado até que eu possa consertá-lo
