@@ -16,3 +16,33 @@ function uuid()
     end)
 end
 ```
+
+## OnLook (temporary fix) function for Canary
+search for (data/events/scripts/player.lua)
+
+```lua
+function Player:onLook(thing, position, distance)
+	local description = "You see "
+```
+
+then replace for:
+
+```lua
+local Constants = dofile(DATA_DIRECTORY .. '/scripts/magic_roulette/lib/core/constants.lua')
+
+function onRouletteLook(thing, position, distance, description)
+	if thing:getName() == Constants.ROULETTE_DUMMY_NAME then
+		local item = ItemType(thing:getOutfit().lookTypeEx)
+
+		return ('You see %s.\n%s'):format(
+			item:getName(),
+			item:getDescription()
+		)
+	end
+	return description
+end
+
+function Player:onLook(thing, position, distance)
+	local description = "You see "
+	description = onRouletteLook(thing, position, distance, description)
+```
