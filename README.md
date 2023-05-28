@@ -3,8 +3,8 @@
 ## Dependencies
 #### Class Helper (lib/core/class.lua)
 https://gist.github.com/lyuz1n/6ef834507fbbeb57040ea5a325af6cbb
-#### creature:setSpeed method (add to your source)
-https://gist.github.com/lyuz1n/e1690914b3469ec30f3b6ca60800974b
+#### creature:setSpeed method (add to your source) no Canary
+https://gist.github.com/Corlyone/f166260c3a471d1e3cfde6c57f321ecc
 #### uuid function (add to data/global.lua)
 ```lua
 local random = math.random
