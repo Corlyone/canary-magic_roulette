@@ -1,7 +1,7 @@
 --[[
 	Description: This file is part of Roulette System (refactored)
-	Author: Lyµ
-	Discord: Lyµ#8767
+	Author: LyÂµ
+	Discord: LyÂµ#8767
 	Adaptado para o Canary:  NvSo#4349
 ]]
 
@@ -14,6 +14,7 @@ local Functions = {}
 function Functions:giveReward(player, reward)
 	local item = Game.createItem(reward.id, reward.count)
 	local itemName = ItemType(reward.id):getName()
+	local itemId = ItemType(reward.id):getId()
 	if not item then
 		return false
 	end
@@ -25,8 +26,9 @@ function Functions:giveReward(player, reward)
 	end
 
 	DatabaseRoulettePlays:update(reward.uuid, Constants.PLAY_STATUS_DELIVERED)
-	player:sendTextMessage(MESSAGE_LOOK, string.format(Strings.GIVE_REWARD_SUCCESS:format(
+	player:sendTextMessage(MESSAGE_LOOT, string.format(Strings.GIVE_REWARD_SUCCESS:format(
 		reward.count,
+		itemId,
 		itemName
 	)))
 
