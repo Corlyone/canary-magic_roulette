@@ -16,7 +16,7 @@ return {
 	NEEDITEM_TO_SPIN = 'Voc\195\170 precisa de %dx %s para girar.',
 
 	GIVE_REWARD_FAILURE = 'O item n\195\163o p\195\180de ser entregue. Verifique se sua mochila tem espa\195\167o e fa\195\167a login novamente.',
-	GIVE_REWARD_SUCCESS = 'Parab\195\169ns, voc\195\170 recebeu %dx %s.',
+	GIVE_REWARD_SUCCESS = 'Parab\195\169ns, voc\195\170 recebeu %dx {%d|%s}.',
 	GIVE_REWARD_FOUND_RARE = '[Roleta]: O jogador %s encontrou %dx %s, incr\195\173vel.'
 
 }
